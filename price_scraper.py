@@ -22,4 +22,7 @@ return_flight_inpurt = {'Depature': " PHX",
                         'Arrival': " YEG",
                         'Date': "May 21, 2024"}
 
+def find_cheapest_flights(flight_info):
+    pass
+
 
