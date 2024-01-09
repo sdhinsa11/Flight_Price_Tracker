@@ -1,8 +1,14 @@
-from bs4 import BeautifulSoup
-import requests
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
 
-#requesting information from a specific website, (like person that requests information)
 
+import pandas as pd
 
-html_text = requests.get('') # type this in and put URL in brackets too show the library you want too request 
-                            # can name the variable whatever 
+import smtplib
+from email.message import EmailMessage
+
+import sched
