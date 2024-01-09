@@ -12,3 +12,14 @@ import smtplib
 from email.message import EmailMessage
 
 import sched
+
+
+departure_flight_inputs = {'Depature': " YEG",
+                           'Arrival': " PHX",
+                           'Date': "May 16, 2024"}
+
+return_flight_inpurt = {'Depature': " PHX",
+                        'Arrival': " YEG",
+                        'Date': "May 21, 2024"}
+
+
