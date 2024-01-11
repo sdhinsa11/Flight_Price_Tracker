@@ -23,7 +23,7 @@ return_flight_inpurt = {'Depature': " PHX",
                         'Date': "May 21, 2024"}
 
 def find_cheapest_flights(flight_info):
-    PATH = r"/Users/sohanadhinsa/Desktop/chromedriver-mac-arm64/chromedriver"
+    PATH = '/Users/sohanadhinsa/Desktop/chromedriver-mac-arm64/chromedriver'
     driver = webdriver.Chrome(executable_path=PATH)
 
     leaving_from = flight_info['Departure']
@@ -31,8 +31,27 @@ def find_cheapest_flights(flight_info):
     trip_date = flight_info['Date']
 
 
+
     #Go to Expedia
     driver.get("https://www.expedia.ca")
+
+
+    # to use selenium when need too use xpath to navigate too a specific place on the website 
+    flight_xpath = '//a[@aria-controls="search_form_product_selector_flights"]'
+    flight_element= WebDriverWait(driver,5).until(
+        EC.presence_of_element_located((By.XPATH, flight_xpath))
+        )
+    flight_element.click()
+    time.sleep(0.2)
+
+    #Click on one-way
+    oneway_xpath = '//a[@aria-controls="FlightSearchForm_ONE_WAY"]'
+    one_way_element = WebDriverWait(driver,5).until(
+        EC.presence_of_element_located((By.XPATH, oneway_xpath))
+    )
+    one_way_element.click()
+    time.sleep(0.2)
+
 
 
 
