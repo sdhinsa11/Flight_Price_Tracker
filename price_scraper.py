@@ -67,6 +67,20 @@ def find_cheapest_flights(flight_info):
     leaving_from_element.send_keys(Keys.DOWN, Keys.RETURN)
 
 
+    # Going To
+    going_to_xpath = '//button[@aria-label= "Going to"]'
+    going_to_element = WebDriverWait(driver,5).until(
+        EC.presence_of_element_located((By.XPATH, going_to_xpath))
+        )
+    going_to_element.clear
+    going_to_element.click()
+    time.sleep(1)
+    going_to_element.send_keys(going_to)
+
+    time.sleep(1) # need this otherwise its too fast for the browser 
+    going_to_element.send_keys(Keys.DOWN, Keys.RETURN)
+
+
     
 
 
