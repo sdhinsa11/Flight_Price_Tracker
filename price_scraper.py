@@ -23,6 +23,19 @@ return_flight_inpurt = {'Depature': " PHX",
                         'Date': "May 21, 2024"}
 
 def find_cheapest_flights(flight_info):
-    print("Hello World")
+    PATH = r"/Users/sohanadhinsa/Desktop/chromedriver-mac-arm64/chromedriver"
+    driver = webdriver.Chrome(executable_path=PATH)
+
+    leaving_from = flight_info['Departure']
+    going_to = flight_info['Arrival']
+    trip_date = flight_info['Date']
+
+
+    #Go to Expedia
+    driver.get("https://www.expedia.ca")
+
+
+
+    
 
 
